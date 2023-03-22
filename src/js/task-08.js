@@ -43,11 +43,10 @@ function onFormSubmit(event) {
         alert('All fields must be filled!');
     } else {
         alert('The form has been submitted!');
-        console.log(`The form has email ${email.value} and password ${password.value}`);
-
+        // console.log(`The form has email ${email.value} and password ${password.value}`);
+        console.log(formData);
     }
 }
-
 
 
 

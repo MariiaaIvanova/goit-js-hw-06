@@ -1,16 +1,31 @@
-const inputEL = document.querySelector('#validation-input');
-inputEL.addEventListener('blur', onInputBlur);
-function onInputBlur(event) {
-    const total = event.currentTarget.value.length
-
-    if (Number(inputEL.dataset.length) !== total) {
-         inputEL.classList.add('invalid');
-        console.log(total);
-        return;
-    }
-    inputEL.classList.add('valid');
-    console.log(total);
+const inputEl = document.querySelector('#validation-input');
+inputEl.addEventListener('blur', onInputBlur);
+function onInputBlur() {
+    if (inputEl.value.length < inputEl.getAttribute("data-length") || inputEl.value.length > inputEl.getAttribute("data-length")
+) { inputEl.classList.add("invalid");
+} else {
+inputEl.classList.remove("invalid");
+inputEl.classList.add("valid");
 }
+}
+
+
+
+
+
+// const inputEL = document.querySelector('#validation-input');
+// inputEL.addEventListener('blur', onInputBlur);
+// function onInputBlur(event) {
+//     const total = event.currentTarget.value.length
+
+//     if (Number(inputEL.dataset.length) !== total) {
+//          inputEL.classList.add('invalid');
+//         console.log(total);
+//         return;
+//     }
+//     inputEL.classList.add('valid');
+//     console.log(total);
+// }
 
 
 
